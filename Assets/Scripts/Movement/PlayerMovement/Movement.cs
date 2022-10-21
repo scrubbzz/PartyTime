@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour, IMoveable
         horizontalDirection = new Vector3(horizontalSpeed, 0, 0);
         verticalDirection = new Vector3(0, 0, verticalSpeed);
         
-        rb.velocity = (horizontalDirection + verticalDirection) * moveSpeed;
+        rb.AddForce((horizontalDirection + verticalDirection) * moveSpeed);
 
     }
 }
